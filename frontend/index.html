@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Azan Times</title>
+    <link rel="stylesheet" href="./app_style.css">
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="brand">
+            <div class="logo" aria-hidden="true"></div>
+            <div>
+                <h1>Azan Times</h1>
+                <p class="subtitle" id="todayLabel">Loading date…</p>
+            </div>
+        </div>
+        <div class="toolbar">
+            <span id="statusPill" class="pill"><span class="status-dot"></span><span id="statusText">Online</span></span>
+            <button id="refreshBtn" title="Refresh now">🔄 Refresh</button>
+        </div>
+    </header>
+
+    <div class="panel">
+        <div class="row">
+            <div class="kpi">Next Prayer: <strong id="nextName">—</strong></div>
+            <div class="kpi">Time: <strong id="nextTime">—</strong></div>
+            <div class="kpi">Starts in: <strong id="countdown">—</strong></div>
+        </div>
+        <div class="row" style="flex:1; justify-content:flex-end; min-width:200px;">
+            <span class="err hidden" id="errorMsg">Could not load times.</span>
+        </div>
+    </div>
+
+    <section id="cards" class="grid" aria-live="polite" aria-busy="true">
+        <!-- Cards inserted by JS -->
+    </section>
+
+    <footer>
+        © 2026 Hilal Azan. All rights reserved. Unauthorized use is prohibited.
+    </footer>
+</div>
+<script src="./app_style.js"></script>
+</body>
+</html>
